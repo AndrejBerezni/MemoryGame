@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    
+</head>
+
+<body>
+    <header id="controls-bar">
+        <h1>Memory Game</h1>
+        <div id="game-controls">
+            <button id="new-game">New Game</button>
+            <div id="difficulty">
+                <icon class="fa fa-angle-left"></icon>
+                <h2>Easy</h2>
+                <icon class="fa fa-angle-right"></icon>
+            </div>
+            <div id="audio-visual">
+                <icon class="fa fa-moon"></icon>
+                <icon class="fa fa-volume-up"></icon>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="game"></div>
+    </main>
+</body>
+<script src="./index.js"></script>
+
+</html>
