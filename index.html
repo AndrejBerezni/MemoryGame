@@ -7,16 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
-    
+
 </head>
 
 <body>
     <header id="controls-bar">
-        <h1>Memory Game</h1>
+        <div id="game-title">
+            <!-- Every letter is h1, because when I tried creating them as spans, transform: rotateY in CSS was not working -->
+        <div class="heading-line">
+            <h1>M</h1>
+            <h1>E</h1>
+            <h1 class="change-color">M</h1>
+            <h1>O</h1>
+            <h1>R</h1>
+            <h1>Y</h1>
+        </div>
+        <div class="heading-line">
+            <h1>G</h1>
+            <h1>A</h1>
+            <h1 class="change-color">M</h1>
+            <h1>E</h1>
+        </div>
+    </div>
         <div id="game-controls">
             <button id="new-game">New Game</button>
             <div id="difficulty">
@@ -25,11 +43,11 @@
                 <icon class="fa fa-angle-right"></icon>
             </div>
         </div>
-            <div id="audio-visual">
-                <icon class="fa fa-moon"></icon>
-                <icon class="fa fa-volume-up"></icon>
-            </div>
-        
+        <div id="audio-visual">
+            <icon class="fa fa-moon"></icon>
+            <icon class="fa fa-volume-up"></icon>
+        </div>
+
     </header>
     <main>
         <div id="game"></div>
