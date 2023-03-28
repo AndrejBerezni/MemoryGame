@@ -205,5 +205,14 @@ body {
 main {
     flex:1;
     background-color: var(--lightest);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+#game {
+    aspect-ratio: 1/1;
+    width: 75vmin;
+    border: 1px solid black;
 }
