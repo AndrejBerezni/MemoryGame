@@ -48,13 +48,25 @@ table {
 
 :root {
     box-sizing: border-box;
+    --mainfont: 'Dosis', sans-serif;
+    --auxfont: 'Inconsolata', monospace;
+}
+
+:root.light {
     --darkest: #4a7c59;
     --dark: #68b0ab;
     --middle: #8fc0a9;
     --light: #c8d5b9;
     --lightest: #faf3dd;
-    --mainfont: 'Dosis', sans-serif;
-    --auxfont: 'Inconsolata', monospace;
+    --iconColor: black;
+}
+:root.dark {
+    --darkest: #474973;
+    --dark: #161b33;
+    --middle: #a69cac;
+    --light: #f1dac4;
+    --lightest: #0d0c1d;
+    --iconColor: white;
 }
 
 body {
@@ -71,7 +83,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 3px 0px 5px gray;
+    box-shadow: 3px 0px 5px var(--darkest);
     z-index: 99;
     padding: 2vh 1vw;
 }
@@ -165,7 +177,8 @@ body {
 
 #difficulty > icon {
     transition: .3s;
-}
+    
+}   
 
 #difficulty > icon:hover {
     scale: 1.5;
@@ -177,11 +190,11 @@ body {
     display: flex;
     gap: 4vw;
     padding-bottom: 5vh;
-
+    
 }
 
 #audio-visual > icon {
-    color: black;
+    color: var(--iconColor);
     opacity: 0.9;
     text-shadow: 0px 0px 5px var(--lightest);
     font-size: 1.4rem;
@@ -194,25 +207,37 @@ body {
     text-shadow: none;
 }
 
-
-
-
-
-
-
-
-
+/* MAIN  */
 main {
     flex:1;
     background-color: var(--lightest);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
 
+main > h1 {
+    font-family: var(--auxfont);
+    font-size: 3rem;
+    margin-bottom: 4vh;
+    color: var(--darkest);
+}
+
 #game {
     aspect-ratio: 1/1;
     width: 75vmin;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+/* CARDS */
+
+.card-hidden {
+    width: 100px;
+    height: 150px;
+    border: 2px solid var(--darkest);
+    border-radius: 15%;
+    background: linear-gradient(120deg, var(--middle), var(--dark));
+    box-shadow: -1px 2px 2px var(--middle);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -38,19 +38,22 @@
         <div id="game-controls">
             <button id="new-game">New Game</button>
             <div id="difficulty">
-                <icon class="fa fa-angle-left"></icon>
-                <h2>Easy</h2>
-                <icon class="fa fa-angle-right"></icon>
+                <icon class="fa fa-angle-left" id="difficulty-down"></icon>
+                <h2 id="difficulty-level">Easy</h2>
+                <icon class="fa fa-angle-right" id="difficulty-up"></icon>
             </div>
         </div>
         <div id="audio-visual">
-            <icon class="fa fa-moon"></icon>
-            <icon class="fa fa-volume-up"></icon>
+            <icon class="fa fa-moon" id="light-mode"></icon>
+            <icon class="fa fa-volume-up" id="sound-mode"></icon>
         </div>
 
     </header>
     <main>
-        <div id="game"></div>
+        <h1 id="timer">00:00</h1>
+        <div id="game">
+            <div class="card-hidden"></div>
+        </div>
     </main>
 </body>
 <script src="./index.js"></script>

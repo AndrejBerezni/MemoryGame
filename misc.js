@@ -1,4 +1,4 @@
-export const cards = [
+const cards = [
     {
         src: '',
         value: 1
@@ -256,3 +256,20 @@ export const cards = [
         value: 32
     },
 ]
+
+const difficultyLevels = [
+    {
+        level: 'Easy',
+        tiles: 4
+    },
+    {
+        level: 'Medium',
+        tiles: 6
+    },
+    {
+        level: 'Hard',
+        tiles: 8
+    }
+]
+
+export {cards, difficultyLevels}
