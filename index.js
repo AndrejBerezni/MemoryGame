@@ -49,7 +49,9 @@ difDown.addEventListener('click', () => {
 
 });
 
-//Initialize game board:
+//Initialize game board and handle card clicks:
+
+let openCards = 0;
 
 function initializeBoard() {
     board.innerHTML = ''
@@ -63,16 +65,27 @@ function initializeBoard() {
         tile.className = 'card-hidden';
         tile.indexPosition = i;
         tile.addEventListener('click', () => {
-            if (tile.className === 'card-hidden') {
+            if (tile.className === 'card-hidden' && openCards < 2) {
                 tile.classList.remove('card-hidden');
                 tile.classList.add('card-open');
                 tile.style.background = `center/contain no-repeat url('${tilesArray[tile.indexPosition].src}')`
-                console.log(tile.className)
-            } else if (tile.className === 'card-open') {
-                tile.classList.remove('card-open');
-                tile.classList.add('card-hidden');
-                tile.style.background = 'linear-gradient(120deg, var(--middle), var(--dark))'
-                console.log(tile.className)
+                openCards++
+            } else if (tile.className === 'card-hidden' && openCards == 2) {
+                openCards = 0;
+                let cardsOpen = document.querySelectorAll('.card-open');
+                cardsOpen.forEach(card => {
+                    card.classList.remove('card-open');
+                    card.classList.add('card-hidden');
+                    card.style.background = 'linear-gradient(120deg, var(--middle), var(--dark))'
+                });
+                tile.classList.remove('card-hidden');
+                tile.classList.add('card-open');
+                tile.style.background = `center/contain no-repeat url('${tilesArray[tile.indexPosition].src}')`
+                openCards ++
+
+                // tile.classList.remove('card-open');
+                // tile.classList.add('card-hidden');
+                // tile.style.background = 'linear-gradient(120deg, var(--middle), var(--dark))'
             }
         })
         board.appendChild(tile);
