@@ -259,3 +259,27 @@ main > h1 {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+
+    #controls-bar {
+        width: 100vw;
+        gap: 2vh;
+        padding: 0;
+    }
+
+    #game-title {
+        margin-top: 3vh;
+    }
+
+    #audio-visual {
+        padding-bottom: 3vh;
+    }
+
+    main > h1 {
+        margin-bottom: 1vh;
+    }
+}
