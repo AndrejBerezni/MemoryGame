@@ -54,14 +54,26 @@ difDown.addEventListener('click', () => {
 function initializeBoard() {
     board.innerHTML = ''
     let size = difficultyLevel.tiles;
+    let tilesArray = cards.slice(0, size * size).sort((a, b) => 0.5 - Math.random());
+    console.log(tilesArray);
     board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     for (let i = 0; i < size * size; i++) {
         let tile = document.createElement('div');
         tile.className = 'card-hidden';
-        tile.addEventListener('click', ()=> {
-            tile.classList.toggle('card-hidden');
-            tile.classList.toggle('card-open');
+        tile.indexPosition = i;
+        tile.addEventListener('click', () => {
+            if (tile.className === 'card-hidden') {
+                tile.classList.remove('card-hidden');
+                tile.classList.add('card-open');
+                tile.style.background = `center/contain no-repeat url('${tilesArray[tile.indexPosition].src}')`
+                console.log(tile.className)
+            } else if (tile.className === 'card-open') {
+                tile.classList.remove('card-open');
+                tile.classList.add('card-hidden');
+                tile.style.background = 'linear-gradient(120deg, var(--middle), var(--dark))'
+                console.log(tile.className)
+            }
         })
         board.appendChild(tile);
     }

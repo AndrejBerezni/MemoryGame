@@ -1,258 +1,258 @@
 const cards = [
     {
-        src: '',
+        src: './images/rsz_2deer.png',
         value: 1
     },
     {
-        src: '',
+        src: './images/rsz_2deer.png',
         value: 1
     },
     {
-        src: '',
+        src: './images/rsz_apple.png',
         value: 2
     },
     {
-        src: '',
+        src: './images/rsz_apple.png',
         value: 2
     },
     {
-        src: '',
+        src: './images/rsz_avocado.png',
         value: 3
     },
     {
-        src: '',
+        src: './images/rsz_avocado.png',
         value: 3
     },
     {
-        src: '',
+        src: './images/rsz_beaver.png',
         value: 4
     },
     {
-        src: '',
+        src: './images/rsz_beaver.png',
         value: 4
     },
     {
-        src: '',
+        src: './images/rsz_burger.png',
         value: 5
     },
     {
-        src: '',
+        src: './images/rsz_burger.png',
         value: 5
     },
     {
-        src: '',
+        src: './images/rsz_burrito.png',
         value: 6
     },
     {
-        src: '',
+        src: './images/rsz_burrito.png',
         value: 6
     },
     {
-        src: '',
+        src: './images/rsz_cake.png',
         value: 7
     },
     {
-        src: '',
+        src: './images/rsz_cake.png',
         value: 7
     },
     {
-        src: '',
+        src: './images/rsz_cat.png',
         value: 8
     },
     {
-        src: '',
+        src: './images/rsz_cat.png',
         value: 8
     },
     {
-        src: '',
+        src: './images/rsz_chicken.png',
         value: 9
     },
     {
-        src: '',
+        src: './images/rsz_chicken.png',
         value: 9
     },
     {
-        src: '',
+        src: './images/rsz_chocolate.png',
         value: 10
     },
     {
-        src: '',
+        src: './images/rsz_chocolate.png',
         value: 10
     },
     {
-        src: '',
+        src: './images/rsz_cow.png',
         value: 11
     },
     {
-        src: '',
+        src: './images/rsz_cow.png',
         value: 11
     },
     {
-        src: '',
+        src: './images/rsz_cupcake.png',
         value: 12
     },
     {
-        src: '',
+        src: './images/rsz_cupcake.png',
         value: 12
     },
     {
-        src: '',
+        src: './images/rsz_dog.png',
         value: 13
     },
     {
-        src: '',
+        src: './images/rsz_dog.png',
         value: 13
     },
     {
-        src: '',
+        src: './images/rsz_donut.png',
         value: 14
     },
     {
-        src: '',
+        src: './images/rsz_donut.png',
         value: 14
     },
     {
-        src: '',
+        src: './images/rsz_elephant.png',
         value: 15
     },
     {
-        src: '',
+        src: './images/rsz_elephant.png',
         value: 15
     },
     {
-        src: '',
+        src: './images/rsz_fox.png',
         value: 16
     },
     {
-        src: '',
+        src: './images/rsz_fox.png',
         value: 16
     },
     {
-        src: '',
+        src: './images/rsz_fries.png',
         value: 17
     },
     {
-        src: '',
+        src: './images/rsz_fries.png',
         value: 17
     },
     {
-        src: '',
+        src: './images/rsz_lollipop.png',
         value: 18
     },
     {
-        src: '',
+        src: './images/rsz_lollipop.png',
         value: 18
     },
     {
-        src: '',
+        src: './images/rsz_monkey.png',
         value: 19
     },
     {
-        src: '',
+        src: './images/rsz_monkey.png',
         value: 19
     },
     {
-        src: '',
+        src: './images/rsz_panda.png',
         value: 20
     },
     {
-        src: '',
+        src: './images/rsz_panda.png',
         value: 20
     },
     {
-        src: '',
+        src: './images/rsz_pig.png',
         value: 21
     },
     {
-        src: '',
+        src: './images/rsz_pig.png',
         value: 21
     },
     {
-        src: '',
+        src: './images/rsz_pizza.png',
         value: 22
     },
     {
-        src: '',
+        src: './images/rsz_pizza.png',
         value: 22
     },
     {
-        src: '',
+        src: './images/rsz_sheep.png',
         value: 23
     },
     {
-        src: '',
+        src: './images/rsz_sheep.png',
         value: 23
     },
     {
-        src: '',
+        src: './images/rsz_shrimp.png',
         value: 24
     },
     {
-        src: '',
+        src: './images/rsz_shrimp.png',
         value: 24
     },
     {
-        src: '',
+        src: './images/rsz_sushi1.png',
         value: 25
     },
     {
-        src: '',
+        src: './images/rsz_sushi1.png',
         value: 25
     },
     {
-        src: '',
+        src: './images/rsz_sushi2.png',
         value: 26
     },
     {
-        src: '',
+        src: './images/rsz_sushi2.png',
         value: 26
     },
     {
-        src: '',
+        src: './images/rsz_sushi3.png',
         value: 27
     },
     {
-        src: '',
+        src: './images/rsz_sushi3.png',
         value: 27
     },
     {
-        src: '',
+        src: './images/rsz_sushi4.png',
         value: 28
     },
     {
-        src: '',
+        src: './images/rsz_sushi4.png',
         value: 28
     },
     {
-        src: '',
+        src: './images/rsz_sushi5.png',
         value: 29
     },
     {
-        src: '',
+        src: './images/rsz_sushi5.png',
         value: 29
     },
     {
-        src: '',
+        src: './images/rsz_sushi6.png',
         value: 30
     },
     {
-        src: '',
+        src: './images/rsz_sushi6.png',
         value: 30
     },
     {
-        src: '',
+        src: './images/rsz_tiger.png',
         value: 31
     },
     {
-        src: '',
+        src: './images/rsz_tiger.png',
         value: 31
     },
     {
-        src: '',
+        src: './images/rsz_zebra.png',
         value: 32
     },
     {
-        src: '',
+        src: './images/rsz_zebra.png',
         value: 32
     },
 ]
