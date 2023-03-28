@@ -223,21 +223,36 @@ main > h1 {
     font-size: 3rem;
     margin-bottom: 4vh;
     color: var(--darkest);
+    font-weight: bold;
+    text-shadow: 0px 1px 1px var(--light);
 }
 
 #game {
     aspect-ratio: 1/1;
     width: 75vmin;
+    display: grid;
+    gap: 2%;
     /* border: 1px solid black; */
 }
 
 /* CARDS */
 
 .card-hidden {
-    width: 100px;
-    height: 150px;
     border: 2px solid var(--darkest);
     border-radius: 15%;
     background: linear-gradient(120deg, var(--middle), var(--dark));
     box-shadow: -1px 2px 2px var(--middle);
+    transition: .3s;
+}
+
+.card-hidden:hover {
+    scale:1.1;
+}
+
+.card-open {
+    border: 2px solid var(--darkest);
+    border-radius: 15%;
+    background-color: white;
+    box-shadow: -1px 2px 2px var(--middle);
+    transition: .3s;
 }
