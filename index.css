@@ -59,18 +59,19 @@ table {
     --light: #0ccbff;
     --lightest: #f43f08;
     --iconColor: #c8341a;
-    --darkblue:#99f7f6;
-    --lightblue: #cefefd;
-    --darkestblue: #0ccbff;
+    --bgimage: url(./images/layoutImages/food.jpg);
+    --timerbg: rgba(255,255,255,0.7);
 
 }
 :root.dark {
     --darkest: #474973;
     --dark: #161b33;
     --middle: #a69cac;
-    --light: #f1dac4;
-    --lightest: #0d0c1d;
+    --lightest: #f1dac4;
+    --light: #0d0c1d;
     --iconColor: white;
+    --bgimage: url('./images/layoutImages/octopus-removebg-preview.png');
+    --timerbg: rgba(0, 0, 0, 0.7);
 }
 
 body {
@@ -217,7 +218,7 @@ body {
 main {
     flex:1;
     /* background-color: var(--lightest); */
-    background: url(./images/layoutImages/food.jpg);
+    background: var(--bgimage);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -320,7 +321,7 @@ main > h1 {
 
     main > h1 {
         margin-bottom: 2vh;
-        background: rgba(255, 255, 255, 0.7);
+        background: var(--timerbg);
         border: 2px solid var(--lightest);
         padding: 10px;
         border-radius: 15px;
