@@ -8,7 +8,9 @@ const light = document.getElementById('light-mode');
 const sound = document.getElementById('sound-mode');
 const board = document.getElementById('game');
 const root = document.documentElement;
-const timer = document.getElementById('timer');
+const timerDisplay = document.getElementById('timer');
+const gameComplete = document.getElementById('game-complete');
+const totalTime = document.getElementById('total-time');
 
 let isGameInProgress = false;
 
@@ -55,6 +57,9 @@ difDown.addEventListener('click', () => {
 
 function initializeBoard() {
     board.innerHTML = '';
+    gameComplete.classList.add('score-hidden');
+    clearInterval(timerInterval);
+    timer.innerText = '00:00';
     let firstCardOpen = false;
     let secondCardOpen = false;
     let previousCardValue = 0;
@@ -70,6 +75,7 @@ function initializeBoard() {
         tile.addEventListener('click', () => {
             if (tile.className === 'card-hidden') {
                 if (!firstCardOpen) {
+                    startTimer();
                     solvedPairs = 0;
                     isGameInProgress = true;
                     previousCardValue = tilesArray[tile.indexPosition].value;
@@ -92,9 +98,12 @@ function initializeBoard() {
                         });
                         solvedPairs++
                         console.log(solvedPairs)
-                        if (solvedPairs === size*size/2) {
+                        if (solvedPairs === size * size / 2) {
                             isGameInProgress = false;
-                            console.log('You win')
+                            totalTime.innerText = `Your time: ${timerDisplay.textContent}`
+                            gameComplete.classList.remove('score-hidden');
+                            clearInterval(timerInterval)
+                            
                         }
                     }
                 } else if (firstCardOpen && secondCardOpen) {
@@ -115,7 +124,23 @@ function initializeBoard() {
         })
         board.appendChild(tile);
     }
+};
+
+//Setup timer:
+let timerInterval;
+
+function startTimer() {
+    let timer = 0;
+    timerInterval = setInterval(() => {       
+        let minutes = parseInt(timer / 60, 10);
+        let seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        timerDisplay.textContent = `${minutes}:${seconds}`;
+        timer++;
+    }, 1000);
 }
+
 
 // Game on
 
