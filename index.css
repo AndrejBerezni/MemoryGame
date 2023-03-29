@@ -264,7 +264,7 @@ main > h1 {
 #game-complete {
     position: absolute;
     z-index: 100;
-    top:20%;
+    top:35%;
     left: 25%;
     width: 50%;
     height: 30%;
@@ -283,6 +283,7 @@ main > h1 {
     font-weight: bold;
     font-family: var(--mainfont);
     padding: 0;
+    text-align: center;
 }
 
 #game-complete.score-hidden {
