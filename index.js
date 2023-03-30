@@ -87,7 +87,7 @@ function initializeBoard() {
         tile.addEventListener('click', () => {
             if (tile.className === 'card-hidden') {
                 if (soundOn) {
-                    flipSound.currentTime = 0;
+                    flipSound.currentTime = 0.5;
                     flipSound.play();
                 }
                 if (!firstCardOpen) {
@@ -113,7 +113,7 @@ function initializeBoard() {
                             card.style.borderRadius = '15%';
                         });
                         if(soundOn) {
-                            match.currentTime = 0;
+                            // match.currentTime = 0;
                             match.play();
                         }
                         solvedPairs++
