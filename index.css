@@ -207,9 +207,13 @@ body {
 #audio-visual > icon {
     color: var(--iconColor);
     opacity: 0.9;
-    text-shadow: 0px 0px 5px var(--lightest);
+    
     font-size: 1.4rem;
     transition: .5s;
+}
+
+:root.dark #audio-visual > icon {
+    text-shadow: 0px 0px 5px var(--lightest);
 }
 
 #audio-visual > icon:hover {
