@@ -11,6 +11,8 @@ const root = document.documentElement;
 const timerDisplay = document.getElementById('timer');
 const gameComplete = document.getElementById('game-complete');
 const totalTime = document.getElementById('total-time');
+const flipSound = document.getElementById('open-card');
+const match = document.getElementById('match');
 
 let isGameInProgress = false;
 
@@ -21,6 +23,16 @@ light.addEventListener('click', () => {
     root.classList.toggle('dark');
     light.classList.toggle('fa-moon');
     light.classList.toggle('fa-sun');
+});
+
+//Turn Sound ON/OFF
+
+let soundOn = true;
+
+sound.addEventListener('click', () => {
+    soundOn ? soundOn = false : soundOn = true;
+    sound.classList.toggle('fa-volume-up');
+    sound.classList.toggle('fa-volume-off');
 });
 
 //Change difficulty:
@@ -74,6 +86,10 @@ function initializeBoard() {
         tile.indexPosition = i;
         tile.addEventListener('click', () => {
             if (tile.className === 'card-hidden') {
+                if (soundOn) {
+                    flipSound.currentTime = 0;
+                    flipSound.play();
+                }
                 if (!firstCardOpen) {
                     startTimer();
                     solvedPairs = 0;
@@ -96,6 +112,10 @@ function initializeBoard() {
                             card.style.border = '3px solid gold';
                             card.style.borderRadius = '15%';
                         });
+                        if(soundOn) {
+                            match.currentTime = 0;
+                            match.play();
+                        }
                         solvedPairs++
                         console.log(solvedPairs)
                         if (solvedPairs === size * size / 2) {
@@ -103,7 +123,7 @@ function initializeBoard() {
                             totalTime.innerText = `Your time: ${timerDisplay.textContent}`
                             gameComplete.classList.remove('score-hidden');
                             clearInterval(timerInterval)
-                            
+
                         }
                     }
                 } else if (firstCardOpen && secondCardOpen) {
@@ -131,7 +151,7 @@ let timerInterval;
 
 function startTimer() {
     let timer = 0;
-    timerInterval = setInterval(() => {       
+    timerInterval = setInterval(() => {
         let minutes = parseInt(timer / 60, 10);
         let seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -142,7 +162,7 @@ function startTimer() {
 }
 
 
-// Game on
+//Game on
 
 newGame.addEventListener('click', initializeBoard);
 

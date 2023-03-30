@@ -20,11 +20,15 @@ I have used free images from **Freepik**. Check them out, there are plenty of co
 
 - Image by Freepik: https://www.freepik.com/free-vector/hand-drawn-flat-design-japan-food-illustration_22893158.htm#query=kawaii%20geisha%20eating&position=22&from_view=search&track=ais"
 
--<a href="https://www.freepik.com/free-vector/cute-octopus-eating-ramen-noodle-cartoon-vector-icon-illustration-animal-food-icon-concept-isolated_34737607.htm#query=kawaii%20eating%20dark&position=10&from_view=search&track=ais">Image by catalyststuff</a> on Freepik
+- Image by catalyststuff on Freepik: "https://www.freepik.com/free-vector/cute-octopus-eating-ramen-noodle-cartoon-vector-icon-illustration-animal-food-icon-concept-isolated_34737607.htm#query=kawaii%20eating%20dark&position=10&from_view=search&track=ais"
 
-Favicon was downloaded from Flaticon, great source for free icons:
+Favicon was downloaded from **Flaticon**, great source for free icons:
 - Board game icons created by Freepik - Flaticon: "https://www.flaticon.com/free-icons/board-game"
 
+Sounds were downloaded from **Pixabay**:
 
+- Sound Effect from Pixabay: "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=91468"
+
+- Sound Effect from Pixabay: href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6346"
 
 Thank you for visiting my **GitHub** profile!

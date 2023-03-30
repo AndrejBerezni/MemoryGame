@@ -8,7 +8,7 @@
     <title>Memory Game</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -60,7 +60,12 @@
             <h2 id="total-time"></h2>
         </div>
     </main>
-
+    <audio id="open-card">
+        <source src="./sounds/flipcard.mp3" type="audio/wav">
+    </audio>
+    <audio id="match">
+        <source src="./sounds/short-success-sound.mp3" type="audio/wav">
+    </audio>
 </body>
 <script type='module' src="./index.js"></script>
 

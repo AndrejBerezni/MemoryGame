@@ -70,7 +70,7 @@ table {
     --lightest: #f1dac4;
     --light: #0d0c1d;
     --iconColor: white;
-    --bgimage: url('./images/layoutImages/octopus-removebg-preview.png');
+    --bgimage: url('./images/layoutImages/octopus-removebg-preview.jpg');
     --timerbg: rgba(0, 0, 0, 0.7);
 }
 
@@ -214,6 +214,10 @@ body {
     text-shadow: none;
 }
 
+:root.dark #audio-visual > icon:hover {
+    color: var(--middle)
+}
+
 /* MAIN  */
 main {
     flex:1;
@@ -235,6 +239,11 @@ main > h1 {
     color: var(--lightest);
     font-weight: bold;
     text-shadow: 0px 1px 1px var(--light);
+    background: var(--timerbg);
+    border: 2px solid var(--lightest);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px var(--lightest);
 }
 
 #game {
@@ -295,6 +304,7 @@ main > h1 {
     font-family: var(--mainfont);
     padding: 0;
     text-align: center;
+    color: var(--lightest);
 }
 
 #game-complete.score-hidden {
@@ -320,14 +330,7 @@ main > h1 {
     }
 
     main > h1 {
-        margin-bottom: 2vh;
-        background: var(--timerbg);
-        border: 2px solid var(--lightest);
-        padding: 10px;
-        border-radius: 15px;
-        box-shadow: 0px 2px 4px var(--lightest);
-
-        
+        margin-bottom: 2vh;      
     }
 
     #game-complete {
@@ -343,6 +346,7 @@ main > h1 {
     #audio-visual {
         position: absolute;
         bottom: 0;
+        padding-bottom: 1.5vh;
     }
 
     #difficulty {
