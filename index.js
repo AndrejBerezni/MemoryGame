@@ -9,24 +9,20 @@ const sound = document.getElementById('sound-mode');
 const board = document.getElementById('game');
 const root = document.documentElement;
 const timerDisplay = document.getElementById('timer');
-const gameComplete = document.getElementById('game-complete');
+const gameCompleteText = document.getElementById('game-complete');
 const totalTime = document.getElementById('total-time');
 const flipSound = document.getElementById('open-card');
 const match = document.getElementById('match');
-
 let isGameInProgress = false;
 
 //Toggle themes:
-
 light.addEventListener('click', () => {
-    root.classList.toggle('light');
     root.classList.toggle('dark');
     light.classList.toggle('fa-moon');
     light.classList.toggle('fa-sun');
 });
 
 //Turn Sound ON/OFF
-
 let soundOn = true;
 
 sound.addEventListener('click', () => {
@@ -61,15 +57,12 @@ difDown.addEventListener('click', () => {
     if (!isGameInProgress) {
         initializeBoard();
     }
-
 });
 
 //Initialize game board and handle card clicks:
-
-
 function initializeBoard() {
     board.innerHTML = '';
-    gameComplete.classList.add('score-hidden');
+    gameCompleteText.classList.add('score-hidden');
     clearInterval(timerInterval);
     timer.innerText = '00:00';
     let firstCardOpen = false;
@@ -112,7 +105,7 @@ function initializeBoard() {
                             card.style.border = '3px solid gold';
                             card.style.borderRadius = '15%';
                         });
-                        if(soundOn) {
+                        if (soundOn) {
                             // match.currentTime = 0;
                             match.play();
                         }
@@ -121,7 +114,7 @@ function initializeBoard() {
                         if (solvedPairs === size * size / 2) {
                             isGameInProgress = false;
                             totalTime.innerText = `Your time: ${timerDisplay.textContent}`
-                            gameComplete.classList.remove('score-hidden');
+                            gameCompleteText.classList.remove('score-hidden');
                             clearInterval(timerInterval)
 
                         }
@@ -161,9 +154,6 @@ function startTimer() {
     }, 1000);
 }
 
-
 //Game on
-
 newGame.addEventListener('click', initializeBoard);
-
 initializeBoard();

@@ -52,7 +52,7 @@ table {
     --auxfont: 'Inconsolata', monospace;
 }
 
-:root.light {
+:root {
     --darkest: #99f7f6;
     --dark: #cefefd;
     --middle: #8fc0a9;
